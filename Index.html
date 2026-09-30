@@ -1,1 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>OSWALDO ROJAS ACADEMY</title>
+
+<meta name="description" content="OSWALDO ROJAS ACADEMY — Aprende FL Studio, producción musical, mixing, mastering y desarrolla tus habilidades digitales.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07070b;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(7,7,11,.90);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:19px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#b96cff;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#ffffff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:150px 25px 100px;
+
+    background:
+        radial-gradient(circle at 50% 15%,rgba(166,82,255,.30),transparent 32%),
+        radial-gradient(circle at 80% 80%,rgba(255,190,70,.08),transparent 30%),
+        #07070b;
+}
+
+.hero-content{
+    max-width:1000px;
+}
+
+.label{
+    display:inline-block;
+    padding:9px 20px;
+    border:1px solid rgba(184,111,255,.55);
+    border-radius:50px;
+
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+
+    color:#d6aaff;
+
+    margin-bottom:28px;
+}
+
+.hero h1{
+    font-size:clamp(48px,9vw,100px);
+    line-height:.92;
+    letter-spacing:-5px;
+    font-weight:950;
+
+    margin-bottom:30px;
+}
+
+.hero h1 span{
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #d29aff,
+        #9c4dff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+
+    font-size:18px;
+    color:#a9a9b5;
+}
+
+.buttons{
+    margin-top:40px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-block;
+
+    padding:16px 30px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:900;
+    font-size:13px;
+
+    letter-spacing:.5px;
+
+    transition:.25s;
+}
+
+.primary{
+    background:linear-gradient(
+        135deg,
+        #b967ff,
+        #8534e8
+    );
+
+    color:#ffffff;
+
+    box-shadow:
+        0 15px 45px
+        rgba(151,60,255,.25);
+}
+
+.primary:hover{
+    transform:translateY(-4px);
+}
+
+.secondary{
+    border:1px solid #383842;
+    color:#ffffff;
+    background:#111117;
+}
+
+.secondary:hover{
+    border-color:#a855f7;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:110px 25px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title small{
+    color:#b96cff;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+}
+
+.title h2{
+    font-size:clamp(35px,5vw,55px);
+
+    margin-top:10px;
+
+    font-weight:900;
+
+    letter-spacing:-2px;
+}
+
+.title p{
+    color:#858590;
+
+    margin-top:12px;
+}
+
+/* ================= COURSES ================= */
+
+.courses{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:24px;
+}
+
+.card{
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #15151d,
+            #0e0e13
+        );
+
+    border:1px solid #282832;
+
+    border-radius:20px;
+
+    padding:32px;
+
+    transition:.3s;
+}
+
+.card:before{
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+    right:-100px;
+
+    width:200px;
+    height:200px;
+
+    background:
+        rgba(164,75,255,.13);
+
+    filter:blur(50px);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:#a855f7;
+}
+
+.number{
+    font-size:12px;
+
+    color:#9c9ca7;
+
+    letter-spacing:2px;
+}
+
+.icon{
+    font-size:42px;
+
+    margin:22px 0 15px;
+}
+
+.card h3{
+    font-size:23px;
+
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#92929e;
+
+    font-size:14px;
+
+    min-height:75px;
+}
+
+.price{
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:25px 0;
+}
+
+.price span{
+    font-size:12px;
+
+    color:#888894;
+
+    font-weight:normal;
+}
+
+.card .btn{
+    width:100%;
+
+    text-align:center;
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+    background:#0c0c11;
+
+    border-top:
+        1px solid #18181f;
+
+    border-bottom:
+        1px solid #18181f;
+}
+
+.benefit-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.benefit{
+    padding:30px 20px;
+
+    text-align:center;
+
+    border:1px solid #25252e;
+
+    border-radius:16px;
+
+    background:#111117;
+
+    transition:.25s;
+}
+
+.benefit:hover{
+    border-color:#a855f7;
+
+    transform:translateY(-4px);
+}
+
+.benefit-icon{
+    font-size:32px;
+}
+
+.benefit h3{
+    margin:15px 0 8px;
+
+    font-size:17px;
+}
+
+.benefit p{
+    font-size:13px;
+
+    color:#858590;
+}
+
+/* ================= ABOUT ================= */
+
+.about-box{
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:65px 35px;
+
+    border-radius:25px;
+
+    border:1px solid #292332;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(168,85,247,.13),
+            transparent 55%
+        ),
+        #101016;
+}
+
+.about-box small{
+    color:#b66cff;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+}
+
+.about-box h2{
+    font-size:45px;
+
+    margin:12px 0 20px;
+}
+
+.about-box p{
+    color:#9999a5;
+
+    font-size:17px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(168,85,247,.20),
+            transparent 50%
+        ),
+        #08080d;
+}
+
+.cta h2{
+    font-size:
+        clamp(38px,6vw,65px);
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    letter-spacing:-3px;
+}
+
+.cta p{
+    color:#9999a5;
+
+    margin-bottom:30px;
+}
+
+.email{
+    margin-top:25px;
+
+    color:#aaa;
+
+    font-size:14px;
+}
+
+.email a{
+    color:#c084fc;
+
+    text-decoration:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:
+        1px solid #20202a;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    color:#686873;
+
+    font-size:12px;
+}
+
+footer strong{
+    color:#ffffff;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    nav a{
+        display:none;
+    }
+
+    .courses{
+        grid-template-columns:1fr;
+    }
+
+    .benefit-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:27px;
+    }
+
+    .about-box{
+        padding:45px 25px;
+    }
+
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:27px;
+
+    z-index:1000;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37,211,102,.30);
+
+    transition:.25s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+OSWALDO <span>ROJAS</span>
+</div>
+
+<div>
+
+<a href="#cursos">CURSOS</a>
+
+<a href="#beneficios">
+BENEFICIOS
+</a>
+
+<a href="#contacto">
+CONTACTO
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="label">
+OSWALDO ROJAS ACADEMY
+</div>
+
+<h1>
+
+APRENDE.<br>
+
+<span>
+CREA. MONETIZA.
+</span>
+
+</h1>
+
+<p>
+
+Aprende producción musical, FL Studio,
+creación digital y nuevas habilidades
+para convertir tu conocimiento en
+oportunidades.
+
+</p>
+
+
+<div class="buttons">
+
+<a
+href="#cursos"
+class="btn primary">
+
+EXPLORAR CURSOS
+
+</a>
+
+
+<a
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20OSWALDO%20ROJAS%20ACADEMY."
+class="btn secondary">
+
+HABLAR CON OSWALDO
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= COURSES ================= -->
+
+<section id="cursos">
+
+<div class="container">
+
+
+<div class="title">
+
+<small>
+FORMACIÓN PREMIUM
+</small>
+
+<h2>
+Elige tu próximo nivel.
+</h2>
+
+<p>
+Cursos prácticos para desarrollar
+habilidades reales.
+</p>
+
+</div>
+
+
+
+<div class="courses">
+
+
+<!-- COURSE 1 -->
+
+<div class="card">
+
+<div class="number">
+01 / PRODUCCIÓN
+</div>
+
+<div class="icon">
+🎹
+</div>
+
+<h3>
+FL Studio desde Cero
+</h3>
+
+<p>
+
+Aprende desde la interfaz hasta crear
+tus primeras producciones musicales
+utilizando FL Studio.
+
+</p>
+
+<div class="price">
+
+$49 <span>USD</span>
+
+</div>
+
+
+<a
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20estoy%20interesado%20en%20el%20curso%20de%20FL%20Studio%20desde%20Cero.%20%C2%BFC%C3%B3mo%20puedo%20inscribirme%3F"
+class="btn primary">
+
+QUIERO ESTE CURSO
+
+</a>
+
+</div>
+
+
+
+<!-- COURSE 2 -->
+
+<div class="card">
+
+<div class="number">
+02 / CREACIÓN
+</div>
+
+<div class="icon">
+🎚️
+</div>
+
+<h3>
+Producción Musical
+</h3>
+
+<p>
+
+Aprende beats, drums, melodías,
+estructuras y técnicas de producción
+musical.
+
+</p>
+
+<div class="price">
+
+$79 <span>USD</span>
+
+</div>
+
+
+<a
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20estoy%20interesado%20en%20el%20curso%20de%20Producci%C3%B3n%20Musical.%20%C2%BFMe%20puedes%20enviar%20la%20informaci%C3%B3n%3F"
+class="btn primary">
+
+QUIERO ESTE CURSO
+
+</a>
+
+</div>
+
+
+
+<!-- COURSE 3 -->
+
+<div class="card">
+
+<div class="number">
+03 / AUDIO
+</div>
+
+<div class="icon">
+🎧
+</div>
+
+<h3>
+Mixing & Mastering
+</h3>
+
+<p>
+
+Aprende fundamentos para conseguir
+mezclas más limpias, equilibradas
+y profesionales.
+
+</p>
+
+<div class="price">
+
+$69 <span>USD</span>
+
+</div>
+
+
+<a
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20estoy%20interesado%20en%20el%20curso%20de%20Mixing%20%26%20Mastering.%20%C2%BFC%C3%B3mo%20puedo%20inscribirme%3F"
+class="btn primary">
+
+QUIERO ESTE CURSO
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section
+class="benefits"
+id="beneficios">
+
+<div class="container">
+
+
+<div class="title">
+
+<small>
+LA ACADEMIA
+</small>
+
+<h2>
+Más que un curso.
+</h2>
+
+<p>
+Una experiencia enfocada en conocimiento
+práctico.
+</p>
+
+</div>
+
+
+
+<div class="benefit-grid">
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🎓
+</div>
+
+<h3>
+Contenido práctico
+</h3>
+
+<p>
+Aprende aplicando los conocimientos.
+</p>
+
+</div>
+
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+💻
+</div>
+
+<h3>
+100% Online
+</h3>
+
+<p>
+Estudia desde donde estés.
+</p>
+
+</div>
+
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🚀
+</div>
+
+<h3>
+A tu ritmo
+</h3>
+
+<p>
+Avanza según tu propio proceso.
+</p>
+
+</div>
+
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+💰
+</div>
+
+<h3>
+Monetización
+</h3>
+
+<p>
+Aprende a convertir habilidades
+en oportunidades.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="about-box">
+
+<small>
+MENTOR & CREADOR
+</small>
+
+<h2>
+OSWALDO ROJAS
+</h2>
+
+<p>
+
+Productor musical, creador y emprendedor
+digital.
+
+OSWALDO ROJAS ACADEMY nace con una misión:
+compartir conocimiento práctico para ayudar
+a nuevos creadores a desarrollar habilidades,
+crear proyectos y construir nuevas
+oportunidades en el mundo digital.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+class="cta"
+id="contacto">
+
+<div class="container">
+
+<h2>
+
+ESTÁS A UN PASO<br>
+
+DE EMPEZAR.
+
+</h2>
+
+
+<p>
+
+¿Tienes preguntas sobre los cursos?
+Escríbeme directamente por WhatsApp.
+
+</p>
+
+
+<a
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20quiero%20informaci%C3%B3n%20sobre%20OSWALDO%20ROJAS%20ACADEMY."
+class="btn primary">
+
+CONTACTAR POR WHATSAPP
+
+</a>
+
+
+<div class="email">
+
+También puedes escribir a:
+
+<br>
+
+<a
+href="mailto:oswaldoalexanderrojasbrito@gmail.com">
+
+oswaldoalexanderrojasbrito@gmail.com
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026
+
+<strong>
+OSWALDO ROJAS ACADEMY
+</strong>
+
+<br><br>
+
+APRENDE · CREA · MONETIZA
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP BUTTON ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/18498849476?text=Hola%20Oswaldo%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20cursos."
+aria-label="WhatsApp">
+
+✆
+
+</a>
+
+
+</body>
+</html>
